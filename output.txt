@@ -1,0 +1,100 @@
+Tables_in_news_portal
+article
+category
+correction
+employee
+feedback
+images
+phone
+poll_analysis
+poll_options
+rating
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| mysql                   |
+| news_portal             |
+| news_portal_backup_test |
+| news_portal_test        |
+| news_portal_test2       |
+| performance_schema      |
+| sys                     |
++-------------------------+
+8 rows in set (0.00 sec)
+
+mysql> use news_portal;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++-----------------------+
+| Tables_in_news_portal |
++-----------------------+
+| article               |
+| category              |
+| correction            |
+| employee              |
+| feedback              |
+| images                |
+| phone                 |
+| poll_analysis         |
+| poll_options          |
+| rating                |
++-----------------------+
+10 rows in set (0.00 sec)
+
+mysql> select * from employee;
++--------+----------+-----------+----------------+------+
+| emp_id | username | password  | email          | role |
++--------+----------+-----------+----------------+------+
+|      1 | user1    | password1 | user1@mail.com | w    |
+|      4 | user2    | password2 | user2@mail.com | w    |
+|      5 | user3    | password3 | user3@mail.com | w    |
+|      6 | user4    | password4 | user4@mail.com | w    |
+|      7 | user5    | password5 | user5@mail.com | w    |
+|      8 | user6    | password6 | user6@mail.com | w    |
+|      9 | gagan    | admin     | gagan@mail.com | e    |
++--------+----------+-----------+----------------+------+
+7 rows in set (0.00 sec)
+
+mysql> desc article;
++-------------+---------+------+-----+---------+----------------+
+| Field       | Type    | Null | Key | Default | Extra          |
++-------------+---------+------+-----+---------+----------------+
+| article_id  | int(11) | NO   | PRI | NULL    | auto_increment |
+| title       | text    | YES  |     | NULL    |                |
+| content     | text    | YES  |     | NULL    |                |
+| date        | date    | YES  |     | NULL    |                |
+| category_id | int(11) | YES  |     | NULL    |                |
+| image_url   | text    | YES  |     | NULL    |                |
+| writer_id   | int(11) | YES  |     | NULL    |                |
+| approval    | int(11) | YES  |     | NULL    |                |
++-------------+---------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
+mysql> desc category;
++---------------+---------+------+-----+---------+-------+
+| Field         | Type    | Null | Key | Default | Extra |
++---------------+---------+------+-----+---------+-------+
+| category_id   | int(11) | NO   | UNI | NULL    |       |
+| category_name | text    | YES  |     | NULL    |       |
+| writer_id     | int(11) | NO   | PRI | NULL    |       |
++---------------+---------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> desc employee;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| emp_id   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| username | varchar(32)  | NO   | UNI | NULL    |                |
+| password | varchar(32)  | NO   |     | NULL    |                |
+| email    | varchar(100) | NO   | UNI | NULL    |                |
+| role     | text         | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+mysql> exit 
