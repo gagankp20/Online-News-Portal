@@ -1,0 +1,9 @@
+CREATE TRIGGER insert_rating
+AFTER INSERT
+ON article FOR EACH ROW
+INSERT INTO rating VALUES(NEW.article_id, 0, 0);
+
+CREATE TRIGGER delete_rating
+AFTER DELETE
+ON article FOR EACH ROW
+DELETE FROM rating WHERE article_id = OLD.article_id;

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:4000/#/home -->
+<html lang="en" ng-app="myApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <!--<base href="/">--><base href=".">
+  <title>NEWS</title>
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>-->
+  <link href="./NEWS_files/css" rel="stylesheet" type="text/css">
+
+  <script src="./NEWS_files/jquery.min.js.download"></script>
+  <script src="./NEWS_files/bootstrap.min.js.download"></script>
+  <script type="text/javascript" src="./NEWS_files/angular.js.download"></script>
+  <script type="text/javascript" src="./NEWS_files/angular-route.js.download"></script>
+  <script type="text/javascript" src="./NEWS_files/angular-resource.js.download"></script>
+
+  <script type="text/javascript" src="./NEWS_files/app.js.download"></script>
+  <script type="text/javascript" src="./NEWS_files/controllers.js.download"></script>
+
+  <link rel="stylesheet" type="text/css" href="./NEWS_files/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./NEWS_files/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="./NEWS_files/styles.css">
+  <link rel="stylesheet" href="./NEWS_files/font-awesome.min(1).css">
+
+
+</head>
+<body><header>
+  <br>
+  <a style="text-decoration: none; color: white" href="http://localhost:4000/#/home"><h3>ONLINE NEWS PORTAL</h3></a>
+</header>
+
+
+  <nav>
+    <div class="toggle-wrap">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+  </div>
+</nav>
+<aside ng-controller="loginController" class="ng-scope">
+  <br>
+  <a ng-show="!check()" id="login" href="http://localhost:4000/#/login"><img width="45px" height="45px" ng-src="images/person.png" ng-show="!check()" src="./NEWS_files/person.png"><br><span>LOGIN</span></a>
+  <br>
+  <a ng-show="check()" href="http://localhost:4000/" ng-click="logout()" class="ng-hide"><img width="45px" height="45px" ng-src="images/person.png" ng-show="check()" src="./NEWS_files/person.png" class="ng-hide"><br><span>LOGOUT</span></a>
+  <br>
+  <a href="http://localhost:4000/#/"><i class="fa fa-home fa-lg" aria-hidden="true"></i>  HOME</a>
+  <a href="http://localhost:4000/#/politics"><i class="fa fa-microphone fa-lg" aria-hidden="true"></i>  POLITICS</a>
+  <a href="http://localhost:4000/#/technology"><i class="fa fa-desktop fa-lg" aria-hidden="true"></i>  TECHNOLOGY</a>
+  <a href="http://localhost:4000/#/international"><i class="fa fa-globe fa-lg" aria-hidden="true"></i>  INTERNATIONAL</a>
+  <a href="http://localhost:4000/#/business"><i class="fa fa-inr fa-lg" aria-hidden="true"></i>  BUSINESS</a>
+  <a href="http://localhost:4000/#/movies"><i class="fa fa-film fa-lg" aria-hidden="true"></i>  MOVIES</a>
+  <a href="http://localhost:4000/#/sports"><i class="fa fa-trophy fa-lg" aria-hidden="true"></i>  SPORTS</a>
+  <br>
+  <a href="http://localhost:4000/#/poll">Polling</a>
+  <a href="http://localhost:4000/#/feedback">Feedback</a>
+  <a href="http://localhost:4000/#/contactus">Contact Us</a>
+  <a href="http://localhost:4000/#/suggestededits" ng-show="edit_list_check()" class="ng-hide">Suggested Edits</a>
+</aside>
+
+<script>
+(function() {
+$('.toggle-wrap').on('click', function() {
+  $(this).toggleClass('active');
+  $('aside').animate({width: 'toggle'}, 100);
+});
+})();
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dotmenu')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+<!-- ngView: --><div ng-view="" class="ng-scope"><div class="ng-scope">
+
+  <div class="display-area">
+
+  <!-- ngRepeat: x in feed --><div class="article ng-scope" ng-repeat="x in feed">
+
+    <a href="./NEWS_files/_c6d7b0d4-0900-11ea-8da7-95ed4a38ab68.jpg"><p><img width="130px" height="120px" src="./NEWS_files/_c6d7b0d4-0900-11ea-8da7-95ed4a38ab68.jpg"></p></a>
+
+    <strong style="font-size: 16px; color: #282828	" class="ng-binding">Microsoft is shutting down Cortana app for iOS, Android</strong>
+    <br>
+    <span style="font-size: 10px" class="badge ng-binding">2019-11-16T18:30:00.000Z</span>
+
+    <p style="text-align: justify" class="ng-binding">Cortana, Microsoft’s digital assistant, will no longer be available as standalone application to users in select markets including India, Australia, the UK, China, Spain, and Canada among others. Microsoft will pull the app in these markets on January 31, 2020.  After the shutdown, Cortana app users will not be able to use key functions such as reminders and lists. Users, however, can access these features through Cortana on Windows.  The move, however, doesn’t mean Microsoft is shutting down the Cortana digital assistant. Going forward, Microsoft will offer Cortana as part of Microsoft 365 applications.  “To make your personal digital assistant as helpful as possible, we’re integrating Cortana into your Microsoft 365 productivity apps. As part of this evolution, on January 31st, 2020, we’re ending support for the Cortana app on Android and iOS in your market,” said Microsoft on its support page.  “At that point, the Cortana content you created–such as reminders and lists–will no longer function in the Cortana mobile app or Microsoft Launcher, but can still be accessed through Cortana on Windows. Also, Cortana reminders, lists, and tasks are automatically synced to the Microsoft To Do app, which you can download to your phone for free,” it added.</p>
+
+    <div class="rating ng-scope" ng-controller="ratingController" ng-init="rating = 0">
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 5">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 4">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 3">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 2">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 1">☆</span></a>
+      <!--<br>
+      <button ng-click = "rate()" class = "button2" style = "background-color: blue">RATE</button>-->
+      <br>
+      <br>
+    </div>
+
+  </div><!-- end ngRepeat: x in feed --><div class="article ng-scope" ng-repeat="x in feed">
+
+    <a href="./NEWS_files/n0v0b36o_virat-kohli_625x300_17_November_19.jpg"><p><img width="130px" height="120px" src="./NEWS_files/n0v0b36o_virat-kohli_625x300_17_November_19.jpg"></p></a>
+
+    <strong style="font-size: 16px; color: #282828	" class="ng-binding">VIRAT KOHLI</strong>
+    <br>
+    <span style="font-size: 10px" class="badge ng-binding">2019-11-16T18:30:00.000Z</span>
+
+    <p style="text-align: justify" class="ng-binding">Virat Kohli led India to a convincing victory over Bangladesh in the first Test in Indore on Saturday. India defeated the visitors by an innings and 130 runs to go 1-0 up in the two-match Test series. While Virat Kohli was praised for his leadership skills on the field, the India skipper's gesture off the field in Indore left fans in awe of him. A video went viral on social media where Kohli can be seen interacting with a special fan in Indore. In the video, a fan with a disability was waiting to see her sporting heroes but she was left surprised when Virat Kohli came, greeted her and signed an autograph.</p>
+
+    <div class="rating ng-scope" ng-controller="ratingController" ng-init="rating = 0">
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 5">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 4">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 3">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 2">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 1">☆</span></a>
+      <!--<br>
+      <button ng-click = "rate()" class = "button2" style = "background-color: blue">RATE</button>-->
+      <br>
+      <br>
+    </div>
+
+  </div><!-- end ngRepeat: x in feed --><div class="article ng-scope" ng-repeat="x in feed">
+
+    <a href="./NEWS_files/uddhav-thackeray-amit-shah_625x300_1528317513647.jpg"><p><img width="130px" height="120px" src="./NEWS_files/uddhav-thackeray-amit-shah_625x300_1528317513647.jpg"></p></a>
+
+    <strong style="font-size: 16px; color: #282828	" class="ng-binding">BJP-Sena Break-Up Could Impact Mumbai Mayor Polls On November 22</strong>
+    <br>
+    <span style="font-size: 10px" class="badge ng-binding">2019-11-16T18:30:00.000Z</span>
+
+    <p style="text-align: justify" class="ng-binding">MUMBAI: The break up of the BJP-Shiv Sena alliance in Maharashtra may have an impact on Mumbai''s mayoral polls scheduled for November 22. In the 2017 Brihanmumbai Municipal Corporation polls, the Sena had won 84 corporator seats while the its then ally BJP was a close second with 82 seats in the 227-member civic house.  The BJP had then extended support to the Sena and its leader Vishwanath Mahadeshwar was elected mayor.</p>
+
+    <div class="rating ng-scope" ng-controller="ratingController" ng-init="rating = 0">
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 5">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 4">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 3">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 2">☆</span></a>&nbsp;&nbsp;
+      <a href="http://localhost:4000/" ng-click="rate()"><span style="color: black" ng-click="rating = 1">☆</span></a>
+      <!--<br>
+      <button ng-click = "rate()" class = "button2" style = "background-color: blue">RATE</button>-->
+      <br>
+      <br>
+    </div>
+
+  </div><!-- end ngRepeat: x in feed -->
+
+  </div>
+</div>
+</div>
+
+
+
+
+
+</body></html>
